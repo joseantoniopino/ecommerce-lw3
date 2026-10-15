@@ -202,14 +202,14 @@ Composer no debe ejecutarse como root. `docker compose exec php id` debe mostrar
 
 En **Database → + → Data Source → MySQL**:
 
-| Campo | Valor |
-|---|---|
-| Nombre sugerido | ecommerce Docker local |
-| Host | 127.0.0.1 |
-| Port | 13306 |
-| Database / schema | ecommerce |
-| User | ecommerce |
-| Password | Copiar `MYSQL_PASSWORD` del archivo local `docker/.env` |
+| Campo             | Valor                                                   |
+|-------------------|---------------------------------------------------------|
+| Nombre sugerido   | ecommerce Docker local                                  |
+| Host              | 127.0.0.1                                               |
+| Port              | 13306                                                   |
+| Database / schema | ecommerce                                               |
+| User              | ecommerce                                               |
+| Password          | Copiar `MYSQL_PASSWORD` del archivo local `docker/.env` |
 
 Descargar el driver JDBC desde el propio diálogo si el IDE lo solicita y pulsar **Test Connection**. Debe identificar MySQL **8.4.11**. Seleccionar el esquema y sincronizar; deben aparecer `migrations`, `users`, `password_reset_tokens`, `failed_jobs` y `personal_access_tokens`. `users` está vacío.
 
