@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(\App\Models\Category::class)->constrained()->cascadeOnDelete();
+            $table->foreignIdFor(\App\Models\Color::class)->constrained()->cascadeOnDelete();
+            $table->foreignIdFor(\App\Models\Brand::class)->constrained()->cascadeOnDelete();
+            $table->foreignIdFor(\App\Models\Size::class)->constrained()->cascadeOnDelete();
+            $table->string('name')->unique();
+            $table->string('slug')->unique();
+            $table->unsignedMediumInteger('price');
+            $table->string('image');
             $table->timestamps();
         });
     }
